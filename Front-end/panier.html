@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Orinoco - site de vente en ligne</title>
+
+    <!-- Stylesheet -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Fin Stylesheet -->
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Orinico</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="category.html">Categories</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    
+                    <div id="cartp">
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main class="main">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th style="text-align: center">Produit</th>
+            <th style="text-align: center">Option</th>
+            <th style="text-align: center">Quantité</th>
+            <th style="text-align: center">Prix</th>
+            <th style="text-align: center">Total</th>
+            <th style="text-align: center">...</th>
+          </tr>
+        </thead>
+        <tbody id="tab">
+          <tr id= "panier">
+
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr id="totalTabl" class="table-warning">
+            <td class="text-center" colspan="4">Total</td>
+            <td class="text-center" id="Total">0.00 €</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="col-md-7 col-lg-8" id="Formule">
+        <h2 class="md-3">Passer votre Commande</h2>
+        <form name="CommandForm" id="CommandForm" class="needs-validation">
+          <div class="row g-3 align-items-center">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">
+                  <span style="vertical-align: inherit">Prénom </span>
+    
+              </label>
+              <input
+                name="firstName"
+                type="text"
+                id="firstName"
+                class="form-control"
+                placeholder="Prénom"
+                required
+              />
+              <div class="invalid-feedback">Entrez votre Prénom.</div>
+            </div>
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">
+                  <span style="vertical-align: inherit">Nom</span>
+              
+              </label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="form-control"
+                placeholder="Nom"
+              />
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">Adresse E-mail</span>
+                </span>
+              </label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="vous@exemple.com"
+              />
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">Adresse</span>
+                </span>
+              </label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                class="form-control"
+                placeholder="1234, rue main"
+              />
+            </div>
+            <div class="col-12">
+              <label for="city" class="form-label">
+                <span style="vertical-align: inherit">
+                  <span style="vertical-align: inherit">Ville</span>
+                </span>
+              </label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="form-control"
+                placeholder="Paris"
+              />
+            </div>
+            <hr style="width: 1px" class="my-4" />
+            <button
+              type="submit"
+              id="ValidCommand"
+              class="w-100 btn btn-success btn-lg"
+              style="margin: 15px"
+            >
+              Commander
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Les scripts -->
+    <script src="scripts/panier.js" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.spanawesome.com/3da6175272.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
