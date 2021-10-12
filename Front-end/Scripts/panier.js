@@ -66,7 +66,7 @@ else {
         const $thS = document.createElement("th"); 
         $thS.setAttribute("style", "text-align: center;");
         const $button = document.createElement("button");
-        $button.innerHTML = `<i class="far fa-trash-alt"></i>`; 
+        $button.innerHTML = `<i class="fas fa-trash-alt"></i>`; 
         $button.classList = "btn btn-outline-danger";
         $button.addEventListener("click", function() {
             deleteItem(index);
@@ -77,15 +77,14 @@ else {
 
 
         tableau.append(tr); 
-
-
     }
 }
+
 document.getElementById("CommandForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
     Valid();
-
 });
+
 function Valid () {
     console.log(document.forms.CommandForm);
     if(document.forms.CommandForm.length > 0) {
